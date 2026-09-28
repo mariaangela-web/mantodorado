@@ -12,17 +12,25 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background shadow-sm hover:bg-secondary hover:text-secondary-foreground",
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-secondary hover:text-secondary-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        /* Variantes de marca */
+        gold: "gradient-gold text-gold-foreground shadow-gold hover:brightness-105 hover:-translate-y-0.5 transition-all",
+        forest: "surface-forest shadow-card hover:brightness-110 transition-all",
+        onDark:
+          "border border-cream/50 bg-transparent text-cream hover:bg-cream hover:text-forest transition-colors",
+        quiet: "surface-cream text-forest hover:bg-gold-light/50 transition-colors",
       },
       size: {
-        default: "h-9 px-4 py-2",
+        default: "h-10 px-5 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        lg: "h-11 rounded-md px-7",
+        xl: "h-13 rounded-md px-9 text-base",
+        icon: "h-10 w-10",
       },
+
     },
     defaultVariants: {
       variant: "default",
