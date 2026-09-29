@@ -47,6 +47,8 @@ export function HeroSlider() {
     setIndex((next + slides.length) % slides.length);
   }, []);
 
+  const current = slides[index] ?? slides[0]!;
+
   useEffect(() => {
     const id = window.setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
     return () => window.clearInterval(id);
@@ -85,15 +87,15 @@ export function HeroSlider() {
             <div key={index} className="max-w-2xl reveal-shown">
               <p className="eyebrow text-gold-light">Aguaymanto peruano</p>
               <h1 className="mt-4 text-4xl leading-[1.08] text-cream md:text-6xl">
-                {slides[index].title}
+                {current.title}
               </h1>
-              {slides[index].text ? (
+              {current.text ? (
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/85 md:text-lg">
-                  {slides[index].text}
+                  {current.text}
                 </p>
               ) : null}
               <div className="mt-8 flex flex-wrap gap-3">
-                {slides[index].actions.map((action) => (
+                {current.actions.map((action) => (
                   <Button key={action.label} asChild variant={action.variant} size="xl">
                     <Link to={action.to}>{action.label}</Link>
                   </Button>

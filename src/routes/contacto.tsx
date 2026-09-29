@@ -9,9 +9,6 @@ import { Button } from "@/components/ui/button";
 import { site, whatsappLink } from "@/config/site";
 
 export const Route = createFileRoute("/contacto")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    producto: typeof search.producto === "string" ? search.producto : undefined,
-  }),
   head: () => ({
     meta: [
       { title: "Contacto | Solicita tu cotización de aguaymanto" },
@@ -31,8 +28,6 @@ export const Route = createFileRoute("/contacto")({
 });
 
 function Contacto() {
-  const { producto } = Route.useSearch();
-
   return (
     <>
       <PageHero
@@ -90,7 +85,7 @@ function Contacto() {
               Completa tus datos y te responderemos a la brevedad.
             </p>
             <div className="mt-6">
-              <ContactForm defaultProduct={producto} />
+              <ContactForm />
             </div>
           </Reveal>
         </div>

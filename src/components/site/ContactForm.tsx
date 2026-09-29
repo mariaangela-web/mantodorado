@@ -17,7 +17,7 @@ const clientTypes = [
   "Otro",
 ];
 
-export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
+export function ContactForm({ defaultProduct }: { defaultProduct?: string | undefined }) {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
@@ -30,10 +30,10 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
     const phone = String(form.get("telefono") ?? "").trim();
     const message = String(form.get("mensaje") ?? "").trim();
 
-    if (name.length < 3) next.nombre = "Ingresa tu nombre completo.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) next.email = "Ingresa un correo válido.";
-    if (phone.replace(/\D/g, "").length < 6) next.telefono = "Ingresa un teléfono válido.";
-    if (message.length < 10) next.mensaje = "Cuéntanos brevemente tu requerimiento.";
+    if (name.length < 3) next["nombre"] = "Ingresa tu nombre completo.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) next["email"] = "Ingresa un correo válido.";
+    if (phone.replace(/\D/g, "").length < 6) next["telefono"] = "Ingresa un teléfono válido.";
+    if (message.length < 10) next["mensaje"] = "Cuéntanos brevemente tu requerimiento.";
 
     setErrors(next);
     if (Object.keys(next).length > 0) return;
@@ -66,17 +66,17 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
       className="rounded-xl border border-border bg-card p-6 shadow-card md:p-8"
     >
       <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Nombre completo" name="nombre" error={errors.nombre} required />
+        <Field label="Nombre completo" name="nombre" error={errors["nombre"]} required />
         <Field label="Empresa" name="empresa" placeholder="Opcional" />
-        <Field label="Correo electrónico" name="email" type="email" error={errors.email} required />
-        <Field label="Teléfono" name="telefono" type="tel" error={errors.telefono} required />
+        <Field label="Correo electrónico" name="email" type="email" error={errors["email"]} required />
+        <Field label="Teléfono" name="telefono" type="tel" error={errors["telefono"]} required />
         <Field label="Ciudad" name="ciudad" />
         <div className="grid gap-2">
           <Label htmlFor="tipo">Tipo de cliente</Label>
           <select
             id="tipo"
             name="tipo"
-            defaultValue={clientTypes[0]}
+            defaultValue={clientTypes[0] ?? ""}
             className="h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
           >
             {clientTypes.map((type) => (
@@ -89,7 +89,7 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
           <select
             id="producto"
             name="producto"
-            defaultValue={defaultProduct ?? products[0].slug}
+            defaultValue={defaultProduct ?? products[0]?.slug}
             className="h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:ring-1 focus-visible:ring-ring focus-visible:outline-none"
           >
             {products.map((product) => (
@@ -112,13 +112,13 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
             id="mensaje"
             name="mensaje"
             rows={5}
-            aria-invalid={Boolean(errors.mensaje)}
-            aria-describedby={errors.mensaje ? "mensaje-error" : undefined}
+            aria-invalid={Boolean(errors["mensaje"])}
+            aria-describedby={errors["mensaje"] ? "mensaje-error" : undefined}
             placeholder="Cuéntanos qué necesitas: producto, volumen y ciudad de entrega."
           />
-          {errors.mensaje ? (
+          {errors["mensaje"] ? (
             <p id="mensaje-error" className="text-xs text-destructive">
-              {errors.mensaje}
+              {errors["mensaje"]}
             </p>
           ) : null}
         </div>
@@ -145,9 +145,9 @@ function Field({
   label: string;
   name: string;
   type?: string;
-  error?: string;
-  required?: boolean;
-  placeholder?: string;
+  error?: string | undefined;
+  required?: boolean | undefined;
+  placeholder?: string | undefined;
 }) {
   return (
     <div className="grid gap-2">
