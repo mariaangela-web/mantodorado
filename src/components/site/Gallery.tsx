@@ -6,6 +6,7 @@ import { Reveal } from "./Reveal";
 
 export function Gallery() {
   const [active, setActive] = useState<number | null>(null);
+  const activeItem = active === null ? null : gallery[active];
 
   return (
     <>
@@ -34,11 +35,11 @@ export function Gallery() {
         ))}
       </div>
 
-      {active !== null ? (
+      {activeItem ? (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={gallery[active].alt}
+          aria-label={activeItem.alt}
           onClick={() => setActive(null)}
           className="fixed inset-0 z-100 grid place-items-center bg-forest/95 p-4"
         >
@@ -51,12 +52,12 @@ export function Gallery() {
           </button>
           <figure onClick={(e) => e.stopPropagation()} className="max-w-5xl">
             <img
-              src={gallery[active].src}
-              alt={gallery[active].alt}
+              src={activeItem.src}
+              alt={activeItem.alt}
               className="max-h-[80svh] w-full rounded-lg object-contain"
             />
             <figcaption className="mt-4 text-center text-sm text-cream/80">
-              {gallery[active].alt}
+              {activeItem.alt}
             </figcaption>
           </figure>
         </div>
