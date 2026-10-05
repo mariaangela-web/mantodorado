@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { HeroVideoButton } from "@/components/site/HeroVideoButton";
 import campo from "@/assets/hero-campo.jpg";
 import cosecha from "@/assets/hero-cosecha.jpg";
 import empaque from "@/assets/producto-empaque.jpg";
@@ -101,6 +102,7 @@ export function HeroSlider() {
                   </Button>
                 ))}
               </div>
+              <HeroVideoButton />
             </div>
           </div>
         </div>
