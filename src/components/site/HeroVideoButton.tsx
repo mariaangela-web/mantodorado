@@ -25,7 +25,7 @@ export function HeroVideoButton() {
   return (
     <>
       <Button
-        variant="outlineLight"
+        variant="onDark"
         size="xl"
         onClick={() => setOpen(true)}
         className="mt-3"
