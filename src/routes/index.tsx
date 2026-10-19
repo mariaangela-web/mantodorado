@@ -63,8 +63,8 @@ function Index() {
           </Reveal>
           <div>
             <SectionTitle
-              eyebrow="Sobre nosotros"
-              title="Comprometidos con la calidad del aguaymanto peruano"
+              eyebrow="Sobre la Empresa"
+              title="Comprometidos con la calidad del aguaymanto Limatambeño"
               text="Somos una empresa dedicada a la producción y comercialización de aguaymanto, comprometida con ofrecer productos de calidad y construir relaciones comerciales duraderas con nuestros clientes."
             />
             <Reveal delay={120} className="mt-8 flex flex-wrap gap-3">
