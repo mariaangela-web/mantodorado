@@ -83,7 +83,7 @@ function Index() {
       <section className="surface-cream py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <SectionTitle
-            eyebrow="Nuestros productos"
+            eyebrow="Nuestro producto bandera"
             title="Aguaymanto seleccionado para cada tipo de cliente"
             text="Trabajamos presentaciones para consumo directo y para clientes comerciales."
             align="center"
