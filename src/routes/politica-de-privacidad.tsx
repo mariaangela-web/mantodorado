@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 export const Route = createFileRoute("/politica-de-privacidad")({
   head: () => ({
     meta: [
-      { title: "Política de privacidad | Aguaymanto Perú" },
+      { title: "Política de privacidad | Manto Dorado" },
       {
         name: "description",
         content:
