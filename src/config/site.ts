@@ -13,17 +13,17 @@ export const site = {
     ruc: "[RUC]",
   },
   contact: {
-    whatsapp: "[WHATSAPP]",
+    whatsapp: "967 739 510",
     // Solo dígitos, con código de país. Ej: 51999888777
-    whatsappNumber: "51000000000",
+    whatsappNumber: "51967739510",
     whatsappMessage:
       "Hola, estoy interesado en sus productos de aguaymanto y quisiera recibir información.",
-    phone: "[TELÉFONO]",
-    phoneHref: "tel:+51000000000",
-    email: "[CORREO]",
-    address: "[DIRECCIÓN]",
-    city: "[CIUDAD]",
-    hours: "[HORARIO DE ATENCIÓN]",
+    phone: "921 044 696",
+    phoneHref: "tel:+51921044696",
+    email: "contacto@mantodorado.com",
+    address: "Comunidad Sauceda S/N",
+    city: "Limatambo, Anta, Cusco",
+    hours: "Lunes a sábado: 8:00 a.m. - 6:00 p.m.",
   },
   social: {
     facebook: "#",
