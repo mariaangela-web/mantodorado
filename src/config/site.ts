@@ -8,7 +8,7 @@ export const site = {
   company: {
     name: "Manto Dorado",
     brandName: "Manto Dorado",
-    tagline: "Calidad y compromiso desde el campo peruano.",
+    tagline: "Productores peruanos de aguaymanto fresco, con calidad natural y compromiso.",
     legalName: "[RAZÓN SOCIAL]",
     ruc: "[RUC]",
   },
