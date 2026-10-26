@@ -6,8 +6,8 @@
 
 export const site = {
   company: {
-    name: "[NOMBRE DE LA EMPRESA]",
-    brandName: "Aguaymanto Perú",
+    name: "Manto Dorado",
+    brandName: "Manto Dorado",
     tagline: "Calidad y compromiso desde el campo peruano.",
     legalName: "[RAZÓN SOCIAL]",
     ruc: "[RUC]",
