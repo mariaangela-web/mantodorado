@@ -52,7 +52,7 @@ function QuienesSomos() {
             />
           </Reveal>
           <div>
-            <SectionTitle eyebrow="Nuestra empresa" title="Quiénes somos y qué hacemos" />
+            <SectionTitle eyebrow="Sobre Nuestra empresa" title="Quiénes somos y qué hacemos" />
             <Reveal delay={100} className="mt-6 space-y-4 text-muted-foreground">
               <p>
                 Somos una empresa peruana dedicada a la producción, comercialización y venta de
