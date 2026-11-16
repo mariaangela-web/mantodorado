@@ -52,20 +52,23 @@ function QuienesSomos() {
             />
           </Reveal>
           <div>
-            <SectionTitle eyebrow="Sobre Nuestra empresa" title="Quiénes somos y qué hacemos" />
+            <SectionTitle eyebrow="Sobre Nuestra empresa" title="Aguaymanto: tradición y dulzura natural." />
             <Reveal delay={100} className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                Somos una empresa peruana dedicada a la producción, comercialización y venta de
-                aguaymanto. Trabajamos el fruto fresco y presentaciones orientadas a clientes
-                comerciales.
+                Somos una empresa peruana dedicada a la recolección, selección y comercialización
+                de aguaymanto fresco. Trabajamos directamente con este fruto natural,
+                ofreciendo productos cuidadosamente recolectados y seleccionados para garantizar su calidad y frescura.
               </p>
               <p>
-                Atendemos a clientes particulares, restaurantes, hoteles, cafeterías, tiendas,
-                distribuidores y empresas que requieren aguaymanto de forma puntual o recurrente.
+               Atendemos a clientes particulares, mercados, restaurantes, hoteles, cafeterías, tiendas, distribuidores
+              y empresas interesadas en adquirir aguaymanto para su consumo o comercialización.
               </p>
               <p>
-                Nos diferencia la atención directa, el cuidado en la selección del fruto y el
-                compromiso de cumplir lo acordado en cada pedido. [TEXTO EDITABLE POR LA EMPRESA]
+                Nos diferenciamos por el cuidado durante la recolección, la selección responsable de los frutos, la 
+                atención directa a nuestros clientes y el compromiso de ofrecer aguaymanto fresco y de buena calidad.
+
+                Nuestro propósito es llevar el delicioso sabor del aguaymanto desde el campo hasta tu mesa.
+
               </p>
             </Reveal>
             <Reveal delay={200} className="mt-8">
