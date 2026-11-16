@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 export const Route = createFileRoute("/terminos-y-condiciones")({
   head: () => ({
     meta: [
-      { title: "Términos y condiciones | Aguaymanto Perú" },
+      { title: "Términos y condiciones | Manto Dorado" },
       {
         name: "description",
         content:

@@ -82,13 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aguaymanto Perú | Producción y venta de aguaymanto peruano" },
+      { title: "Manto Dorado | Producción y venta de aguaymanto peruano" },
       {
         name: "description",
         content:
           "Empresa peruana dedicada a la producción y comercialización de aguaymanto fresco. Venta al por mayor y atención a restaurantes, tiendas y distribuidores.",
       },
-      { property: "og:title", content: "Aguaymanto Perú | Producción y venta de aguaymanto" },
+      { property: "og:title", content: "Manto Dorado | Producción y venta de aguaymanto" },
       {
         property: "og:description",
         content:

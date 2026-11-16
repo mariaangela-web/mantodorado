@@ -18,13 +18,13 @@ import campo from "@/assets/galeria-productor.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aguaymanto Perú | Venta y producción de aguaymanto peruano - limatambo" },
+      { title: "Manto Dorado | Venta y producción de aguaymanto peruano - limatambo" },
       {
         name: "description",
         content:
           "Producimos y comercializamos aguaymanto fresco seleccionado en Perú. Venta al por mayor, atención a restaurantes, tiendas y distribuidores. Solicita tu cotización.",
       },
-      { property: "og:title", content: "Aguaymanto Perú | Venta y producción de aguaymanto" },
+      { property: "og:title", content: "Manto Dorado | Venta y producción de aguaymanto" },
       {
         property: "og:description",
         content:
